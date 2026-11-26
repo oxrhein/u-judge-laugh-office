@@ -10,14 +10,18 @@ the most relatable (and most repeated) office ritual in software.
 
 import os
 
+# The entry line, kept as a single module-level constant so the joke text
+# lives in exactly one place and build_line() stays a thin accessor.
+ENTRY_LINE = (
+    "Sprint retro: what went well? Nothing. "
+    "What can improve? Everything. "
+    "Action items: same as last sprint."
+)
+
 
 def build_line():
     """Return the one-line office joke for the AI judge."""
-    return (
-        "Sprint retro: what went well? Nothing. "
-        "What can improve? Everything. "
-        "Action items: same as last sprint."
-    )
+    return ENTRY_LINE
 
 
 def main():
